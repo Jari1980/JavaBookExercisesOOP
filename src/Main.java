@@ -27,6 +27,9 @@ public class Main {
                     case 6:
                         exercise6();
                         break;
+                    case 7:
+                        exercise7();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -38,6 +41,20 @@ public class Main {
             }
         }
     }
+    public static void exercise7(){
+        System.out.println("Creating a class PolarCoordinates which describes a point with polar coordinates, " +
+                "also a method rectangularCoordinate which returns point of given instance in rectangular form");
+        System.out.println("Creating two points:");
+        var pol1 = new PolarCoordinates(1, (45*Math.PI/180));
+        var pol2 = new PolarCoordinates(10, (90*Math.PI/180));
+        System.out.println("Rectangular coordinates for points:");
+        var arr1 = PolarCoordinates.rectangularCoordinate(pol1);
+        var arr2 = PolarCoordinates.rectangularCoordinate(pol2);
+        System.out.println("For point 1 (distance 1, angle 45): x=" + arr1[0] + " y=" + arr1[1]);
+        System.out.println("For point 2 (distance 10, angle 90): x=" + arr2[0] + " y=" + arr2[1]);
+        System.out.println("Seems reasonable, x value for point2 should be 0 but point of 16 decimal wrong so I guess its ok for this.");
+    }
+
     public static void exercise6(){
         System.out.println("Creating a class RationalNumber with method rational, calling this method with given instance of class will" +
                 "return a proper rational number.");
