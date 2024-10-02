@@ -24,7 +24,8 @@ public class Main {
         }
     }
     public static void exercise1(){
-
+        System.out.println("Creating a Book class with following instance variables: articleNr, title, yearPublished," +
+                " pageCount and price");
     }
 
 }
