@@ -21,6 +21,9 @@ public class Main {
                     case 4:
                         exercise4();
                         break;
+                    case 5:
+                        exercise5();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -32,6 +35,17 @@ public class Main {
             }
         }
     }
+    public static void exercise5(){
+        System.out.println("Added tax rate as a class variable to book class, this multiplied with book pages gives " +
+                "total added taxvalue for each book.");
+        System.out.println("Testing:");
+        var arr = createBooks();
+        double taxBook1 = Book.taxRate * arr[0].pageCount;
+        double taxBook2 = Book.taxRate * arr[1].pageCount;
+        System.out.println("Tax added to book1: " + taxBook1 + ", book2: " + taxBook2);
+        System.out.println("Expensive but model is correct");
+    }
+
     public static void exercise4(){
         System.out.println("Creating new class Author, adding a reference variable, Author, to Book class. Adding Author " +
                 "to method so both books get own author.");
