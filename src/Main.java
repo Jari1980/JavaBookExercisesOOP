@@ -24,6 +24,9 @@ public class Main {
                     case 5:
                         exercise5();
                         break;
+                    case 6:
+                        exercise6();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -35,6 +38,15 @@ public class Main {
             }
         }
     }
+    public static void exercise6(){
+        System.out.println("Creating a class RationalNumber with method rational, calling this method with given instance of class will" +
+                "return a proper rational number.");
+        System.out.println("Creating two instanses of RationalNumber.");
+        var rat1 = new RationalNumber(4, 9);
+        var rat2 = new RationalNumber(21, 29);
+        System.out.println("rat1: " + rat1.rational() + ", rat2: " + rat2.rational());
+    }
+
     public static void exercise5(){
         System.out.println("Added tax rate as a class variable to book class, this multiplied with book pages gives " +
                 "total added taxvalue for each book.");
