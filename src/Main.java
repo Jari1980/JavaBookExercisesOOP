@@ -18,6 +18,9 @@ public class Main {
                     case 3:
                         exercise3();
                         break;
+                    case 4:
+                        exercise4();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -29,6 +32,19 @@ public class Main {
             }
         }
     }
+    public static void exercise4(){
+        System.out.println("Creating new class Author, adding a reference variable, Author, to Book class. Adding Author " +
+                "to method so both books get own author.");
+        System.out.println("Testing:");
+        var arr = createBooks();
+        System.out.println("Book1 : \narticleNr: " + arr[0].articleNr + ", title: " + arr[0].title + ", yearPublished: " +
+                arr[0].yearPublished + ", pageCount: " + arr[0].pageCount + ", price: " + arr[0].price +
+                ", author: " + arr[0].author.firstName + " " + arr[0].author.lastName);
+        System.out.println("Book2 : \narticleNr: " + arr[1].articleNr + ", title: " + arr[1].title + ", yearPublished: " +
+                arr[1].yearPublished + ", pageCount: " + arr[1].pageCount + ", price: " + arr[1].price +
+                ", author: " + arr[1].author.firstName + " " + arr[1].author.lastName);
+    }
+
     public static void exercise3(){
         System.out.println("Setting values for instance variables in method createBooks, then calling the method and " +
                 "printing values from this method.");
@@ -45,6 +61,12 @@ public class Main {
     public static Book[] createBooks(){
         var book1 = new Book(){
             {
+                author = new Author(){
+                    {
+                        firstName = "Jari";
+                        lastName = "LearningJava";
+                    }
+                };
                 articleNr = "abc123";
                 title = "Book1";
                 yearPublished = 2000;
@@ -54,6 +76,12 @@ public class Main {
         };
         var book2 = new Book(){
             {
+                author = new Author(){
+                    {
+                        firstName = "Michel";
+                        lastName = "Jeckson";
+                    }
+                };
                 articleNr = "abc456";
                 title = "Book2";
                 yearPublished = 2005;
